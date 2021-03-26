@@ -2,7 +2,7 @@
 
 // chiedere all'utente una parola.
 var parolaUtente= prompt("inserisci una parola: ");
-palindroma(parolaUtente)
+palindroma(parolaUtente);
 
 
 // funzione per capire se palindroma:
@@ -10,20 +10,16 @@ function palindroma(parolaDaAnalizzare){
 
     var risultato;
 
-    for (var i= 0; i< parolaDaAnalizzare.length; i++){
+   var parolaContrario='';
+    for (var j= parolaDaAnalizzare.length-1; j >= 0; j--){
 
-        var dritta = parolaDaAnalizzare[i];
-        console.log(parolaDaAnalizzare[i]);
-    }
-    
-    for (var j= parolaDaAnalizzare.length; j >= 0; j--){
+        var thisLettera = parolaDaAnalizzare[j];
 
-        var rovescio = parolaDaAnalizzare[j];
-        console.log(parolaDaAnalizzare[j]);    
+        parolaContrario += thisLettera;
     }
     
 
-    if(dritta == rovescio) {
+    if(parolaDaAnalizzare == parolaContrario) {
         risultato="SIIIIIII! Parola Palindroma!";
     }
     else {

@@ -2,23 +2,24 @@
 
 // chiedere all'utente una parola.
 var parolaUtente= prompt("inserisci una parola: ");
-console.log(parolaUtente);
+palindroma(parolaUtente)
+
 
 // funzione per capire se palindroma:
-function palindroma(parolaUtente){
+function palindroma(parolaDaAnalizzare){
 
     var risultato;
 
-    for (var i= 0; i< parolaUtente.length; i++){
+    for (var i= 0; i< parolaDaAnalizzare.length; i++){
 
-        var dritta = parolaUtente[i];
-        console.log(parolaUtente[i]);
+        var dritta = parolaDaAnalizzare[i];
+        console.log(parolaDaAnalizzare[i]);
     }
     
-    for (var j= parolaUtente.length; j >= 0; j--){
+    for (var j= parolaDaAnalizzare.length; j >= 0; j--){
 
-        var rovescio = parolaUtente[j];
-        console.log(parolaUtente[j]);    
+        var rovescio = parolaDaAnalizzare[j];
+        console.log(parolaDaAnalizzare[j]);    
     }
     
 
